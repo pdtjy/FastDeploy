@@ -23,8 +23,25 @@ theme:
         icon: material/brightness-4
         name: Switch to system preference
 
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/PaddlePaddle/PaddleOCR
+    - icon: fontawesome/brands/python
+      link: https://pypi.org/project/paddleocr/
+  version:
+    provider: mike
+
 plugins:
   - search
+  - mike:
+      alias_type: symlink
+      redirect_template: null
+      deploy_prefix: ''
+      canonical_version: null
+      version_selector: true
+      css_dir: css
+      javascript_dir: js
   - i18n:
       docs_structure: folder
       fallback_to_default: true
@@ -43,6 +60,7 @@ plugins:
           link: /FastDeploy/zh/
           nav_translations:
             FastDeploy: FastDeploy
+            Big Test: 快速测试
             Quick Start: 快速入门
             Installation: 安装
             Nvidia GPU: 英伟达 GPU
@@ -92,6 +110,7 @@ plugins:
 
 nav:
   - 'FastDeploy': index.md
+  - Big Test: index.md
   - 'Quick Start':
       - Installation:
           - 'Nvidia GPU': get_started/installation/nvidia_gpu.md
